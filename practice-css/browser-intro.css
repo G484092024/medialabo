@@ -1,0 +1,41 @@
+p {
+	color: navy;
+}
+
+p.info {
+	font-size: 10pt;
+	background-color:#dfdfdf;
+}
+
+h1 {
+	color:white;
+
+	text-shadow:1px 1px 10px navy;
+}
+img.aaa {
+    float: right;   /* 画像を右に浮かせる */
+
+}
+h2 {
+	
+	margin: 5px;
+	font-family:cursive;
+	color:#3f3faf;
+	background: linear-gradient(0.25turn,white, #ffefaf);
+}
+
+div#zentai {
+	display: grid;                      /* グリッドレイアウトにする*/
+    grid-template-columns: 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
+    grid-auto-rows: 200px 200px;        /* 高さは 100px */
+    grid-gap: 10px; 
+	width:1024px;
+
+}
+
+div#zentai > div {
+	margin-left: 5px;
+	background-color: #ffefaf;
+	
+}
+
