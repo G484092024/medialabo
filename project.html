@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>program1</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet"  href="project.css">
   </head>
   <body>
     <h1>NHK の番組表（検索結果は2件）</h1>
-        <h2>検索結果1件目</h2>
+      <h2>番組表の検索結果<h2>
+        <label id="zhao" for="shimei">検索キー: </label>
+        <input type="text" name="key" size="20" style="height: 40px; font-size: 30px;" id="key">
+        <button id="print">検索</button>
+      <h3>検索結果1件目</h3>
           <ul>
             <li><b>番組開始時刻: </b>2022-03-04T04:35:00+09:00</li>
             <li><b>番組終了時刻:</b>2022-03-04T04:40:00+09:00</li>
@@ -17,7 +21,7 @@
             <li><b>番組説明文:</b>「ごっつぉさま」うた：須貝智郎／「超変身！ミネラルフォーマーズ」うた：鬼龍院翔ｆｒｏｍゴールデンボンバー</li>                
             <li><b>出演者:</b>AAAさん</li>  
           </ul>
-        <h2>検索結果2件目</h2>
+      <h3>検索結果2件目</h3>
           <ul>
             <li><b>番組開始時刻: </b>2022-03-04T23:05:00+09:00</li>
             <li><b>番組終了時刻:</b>2022-03-04T23:10:00+09:00</li>
@@ -30,5 +34,7 @@
           </ul>
     <script src="tv-program.js"></script>
 
+
+    
   </body>
 </html>

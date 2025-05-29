@@ -5,6 +5,9 @@ h1{
     
 }
 h2{
+    font-size: 40px;
+}
+h3{
     
     font-family:serif ;
     font-size: 40px;
@@ -15,3 +18,8 @@ li{border: solid 1px black;
     font-size: 30px;
     background-color: antiquewhite;
 }
+#find {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  

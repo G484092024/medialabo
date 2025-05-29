@@ -1,11 +1,32 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
+  console.log("開始時間 " + data.list.g1[0].start_time);
+  console.log("結束時間 " + data.list.g1[0].end_time);
+  console.log("チャンネル " + data.list.g1[0].service.name);
+  console.log("番組名 "+data.list.g1[0].title);
+  console.log("番組サブタイトル " + data.list.g1[0].subtitle);
+  console.log("番組説明文 " + data.list.g1[0].content);
+  console.log("出演者 " + data.list.g1[0].act);
 
+  console.log("開始時間 " + data.list.g1[1].start_time);
+  console.log("結束時間 " + data.list.g1[1].end_time);
+  console.log("チャンネル " + data.list.g1[1].service.name);
+  console.log("番組名 "+data.list.g1[1].title);
+  console.log("番組サブタイトル " + data.list.g1[1].subtitle);
+  console.log("番組説明文 " + data.list.g1[1].content);
+  console.log("出演者 " + data.list.g1[1].act);
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+
+  let m = document.createElement('div#result');
+	let u = document.querySelector('body');
+	u.insertAdjacentElement('beforeend',m); 
+
+
+
 
 }
 
@@ -123,20 +144,9 @@ let data = {
     ]
   }
 };
-function print(data) {
-  console.log("開始時間 " + data.list.g1[0].start_time);
-  console.log("結束時間 " + data.list.g1[0].end_time);
-  console.log("チャンネル " + data.list.g1[0].service.name);
-  console.log("番組名 "+data.list.g1[0].title);
-  console.log("番組サブタイトル " + data.list.g1[0].subtitle);
-  console.log("番組説明文 " + data.list.g1[0].content);
-  console.log("出演者 " + data.list.g1[0].act);
-
-  console.log("開始時間 " + data.list.g1[1].start_time);
-  console.log("結束時間 " + data.list.g1[1].end_time);
-  console.log("チャンネル " + data.list.g1[1].service.name);
-  console.log("番組名 "+data.list.g1[1].title);
-  console.log("番組サブタイトル " + data.list.g1[1].subtitle);
-  console.log("番組説明文 " + data.list.g1[1].content);
-  console.log("出演者 " + data.list.g1[1].act);
+function print(){
+  let key = document.querySelector('input#key');
+  console.log(key.value);
 }
+let b = document.querySelector('button#print');
+b.addEventListener('click',print);
