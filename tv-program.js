@@ -20,22 +20,44 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  let cha = document.querySelector('#output');
+  cha.innerHTML = '';  // 清空内容
 
-  let m = document.createElement('div#result');
-	let u = document.querySelector('body');
-	u.insertAdjacentElement('beforeend',m); 
+  let ul = document.createElement('ul');
+  cha.insertAdjacentElement('beforeend', ul);  // 拼写修正
 
+  let li1 = document.createElement("li");
+  li1.textContent = '開始時間: ' + data.list.g1[0].start_time;
+  ul.insertAdjacentElement('beforeend', li1);
 
+  let li2 = document.createElement("li");
+  li2.textContent = '結束時間: ' + data.list.g1[0].end_time;
+  ul.insertAdjacentElement('beforeend', li2);
 
+  let li3 = document.createElement("li");
+  li3.textContent = 'チャンネル: ' + data.list.g1[0].service.name;
+  ul.insertAdjacentElement('beforeend', li3);
 
+  let li4 = document.createElement("li");
+  li4.textContent = '番組名: ' + data.list.g1[0].title;
+  ul.insertAdjacentElement('beforeend', li4);
+
+  let li5 = document.createElement("li");
+  li5.textContent = '番組サブタイトル: ' + data.list.g1[0].subtitle;
+  ul.insertAdjacentElement('beforeend', li5);
+
+  let li6 = document.createElement("li");
+  li6.textContent = '番組説明文: ' + data.list.g1[0].content;
+  ul.insertAdjacentElement('beforeend', li6);
+
+  let li7 = document.createElement("li");
+  li7.textContent = '出演者: ' + data.list.g1[0].act;
+  ul.insertAdjacentElement('beforeend', li7);
 }
 
-// 課題5-1 のイベントハンドラの定義
-function show() {
 
-}
 
-// 課題5-1, 6-1 のイベントハンドラ登録処理は以下に記述
+//6-1 のイベントハンドラ登録処理は以下に記述
 
 
 
@@ -144,9 +166,25 @@ let data = {
     ]
   }
 };
-function print(){
-  let key = document.querySelector('input#key');
-  console.log(key.value);
-}
-let b = document.querySelector('button#print');
-b.addEventListener('click',print);
+
+let bu = document.querySelector('button#anniu');
+bu.addEventListener('click',printDom);
+document.querySelector('#anniu').addEventListener('click', function () {
+let selected = document.querySelector('#xuan').value;
+
+  if (selected === 'first') {
+    printDom({
+      list: {
+        g1: [data.list.g1[0]]
+      }
+    });
+  } else if (selected === 'second') {
+    printDom({
+      list: {
+        g1: [data.list.g1[1]]
+      }
+    });
+  } else {
+    alert("検索結果を選択してください。");
+  }
+});
